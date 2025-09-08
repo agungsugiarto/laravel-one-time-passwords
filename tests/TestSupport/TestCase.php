@@ -31,7 +31,7 @@ class TestCase extends Orchestra
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
         config()->set('app.key', Encrypter::generateKey(config('app.cipher')));
@@ -53,7 +53,7 @@ class TestCase extends Orchestra
         });
     }
 
-    public function updateConfig(string $key, mixed $value)
+    public function updateConfig(string $key, mixed $value): void
     {
         config()->set($key, $value);
 

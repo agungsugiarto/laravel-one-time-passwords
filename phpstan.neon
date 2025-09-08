@@ -2,3 +2,10 @@ parameters:
     level: max
     paths:
         - src
+    phpVersion: 80100 # PHP 8.1
+    ignoreErrors:
+        # Add ignoreErrors if needed for compatibility
+    tmpDir: build/phpstan
+    parallel:
+        jobSize: 20
+        maximumNumberOfProcesses: 32
